@@ -1,0 +1,31 @@
+{% extends "layout.twig" %}
+
+{% block content %}
+
+<h1>Blog</h1>
+
+<div class="list-group">
+{% for post in posts %}
+    <a href="#" class="list-group-item">{{ post.name }}</a>
+{% else %}
+    <p>Pas d'article trouvé.</p>
+{% endfor %}
+</div>
+
+<form action="{{ path_for('home') }}" method="post">
+
+  {{ csrf() }}
+
+  <div class="form-group {% if alert.errors.email %} has-error{% endif %}">
+    <label for="email" class="control-label"></label>
+    <input type="text" class="form-control" name="email" id="email" value="{{ old.email }}">
+    {% if alert.errors.email %}
+      <span class="help-block">{{ alert.errors.email }}</span>
+    {% endif %}
+  </div>
+
+  <input type="submit" class="btn btn-info" value="Envoyer">
+
+</form>
+
+{% endblock %}

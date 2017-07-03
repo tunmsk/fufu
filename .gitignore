@@ -1,0 +1,10 @@
+.idea/*
+composer.lock
+composer.phar
+vendor/*
+cache/*
+!cache/.gitkeep
+app/config/parameters.php
+node_modules/*
+debugbar/*
+!debugbar/.gitkeep

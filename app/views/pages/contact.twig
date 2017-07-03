@@ -1,0 +1,27 @@
+{% extends "layout.twig" %}
+
+{% block content %}
+
+<form class="form-horizontal">
+  <fieldset>
+    <legend>Formulaire fictif</legend>
+
+    <div class="form-group">
+      <label for="inputEmail" class="control-label">Email</label>
+      <input class="form-control" id="inputEmail" placeholder="Email" type="text">
+    </div>
+
+    <div class="form-group">
+      <label for="textArea" class="control-label">Textarea</label>
+      <textarea class="form-control" rows="3" id="textArea"></textarea>
+    </div>
+
+
+    <div class="form-group">
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+
+  </fieldset>
+</form>
+
+{% endblock %}
