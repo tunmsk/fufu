@@ -6,7 +6,7 @@ $container = $app->getContainer();
 $container['view'] = function ($container) {
   $pathView = dirname(dirname(__DIR__));
 
-  if(getenv('CACHE')){
+  if(env('CACHE')){
     $cache = $pathView.'/cache';
   }else{
     $cache = false;
@@ -39,6 +39,7 @@ $container['csrf'] = function () {
 };
 
 // DebugBar
+
 if(getenv('ENV') == 'local'){
   $provider = new Kitchenu\Debugbar\ServiceProvider();
   $provider->register($app);
