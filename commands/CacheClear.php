@@ -13,7 +13,7 @@ class CacheClear extends Command
     protected function configure()
     {
         $this->setName('clear:cache');
-        $this->setDescription('Bootstraps the license file of your project');
+        $this->setDescription('Vide le dossier cache de twig');
 
     }
 
@@ -31,7 +31,7 @@ class CacheClear extends Command
             return false;
         while($file = readdir($dir_handle)) {
             if ($file != "." && $file != "..") {
-                if (!is_dir($dirname."/".$file))
+                if (!is_dir($dirname."/".$file) && $file != ".gitkeep")
                     unlink($dirname."/".$file);
                 else
                     $this->delete_directory($dirname.'/'.$file);

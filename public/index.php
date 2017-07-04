@@ -3,15 +3,9 @@
 // Autoload de composer
 require '../vendor/autoload.php';
 
-//Init de .env
-
+// Initialisation du .env
 $dotenv = new Dotenv\Dotenv(__DIR__.'/../');
 $dotenv->load(true);
-
-// Le fichier qui contient nos constante de configuration
-require '../app/config/parameters.php';
-// Variable d'environnement pour les message d'erreurs slim
-
 
 // Configuration slim pour les messages d'erreurs
 $configuration = [
@@ -22,7 +16,7 @@ $configuration = [
 
 // Initialisation des paramètres du container slim
 $c = new \Slim\Container($configuration);
-require '../app/config/errors.php';
+require '../app/config/error_pages.php';
 
 // Initialisation de Slim
 $app = new \Slim\App($c);
