@@ -12,9 +12,9 @@ class GenerateCommand extends Command
 {
     protected function configure()
     {
-        $this->setName('generate:command');
-        $this->addArgument("name", InputArgument::REQUIRED, 'Nom de la commande');
-        $this->setDescription('Generate command class');
+        $this->setName('generate:controller');
+        $this->addArgument("name", InputArgument::REQUIRED, 'Nom du controller');
+        $this->setDescription('Generate controller class');
 
     }
 
@@ -22,11 +22,11 @@ class GenerateCommand extends Command
     {
         $name = $input->getArgument('name');
 
-        $text = file_get_contents(__DIR__.'/templates/command.template.php');
+        $text = file_get_contents(__DIR__.'/templates/controller.template.php');
 
-        file_put_contents(__DIR__.'/'.$name.'.php', preg_replace('/PregReplace/', "$name", $text));
+        file_put_contents('../app/Controllers/'.$name.'Controller.php', preg_replace('/PregReplace/', "$name", $text));
 
-        $output->writeln("Commande générée");
+        $output->writeln("Controller généré");
     }
 
 }

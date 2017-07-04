@@ -10,6 +10,8 @@ $application = new Application('Sushi', '1.0.0');
 
 $CacheClearCommand = new \Commands\CacheClear();
 $GenerateCommand = new \Commands\GenerateCommand();
+$GenerateController = new \Commands\GenerateController();
 $application->add($CacheClearCommand);
 $application->add($GenerateCommand);
+$application->add($GenerateController);
 $application->run();
