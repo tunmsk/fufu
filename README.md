@@ -15,7 +15,7 @@ Pour toutes contribution sur github, merci de lire le document [CONTRIBUTING.md]
 - [x] Commandes gulp pour faciliter le développement front-end.
 - [x] Mise en place de middlewares pour le csrf, message flash et sauvegarde des inputs.
 - [x] Commande via la console pour vider le cache de twig.
-- [ ] Commandes via la console pour créer rapidement des controlleurs/middlewares.
+- [x] Commandes via la console pour créer rapidement des controlleurs/middlewares.
 
 
 ## Pre-requis
@@ -96,7 +96,7 @@ D'autres commandes sont disponibles, je vous laisse regarder le script pour vous
 
 ## Commandes console
 
-Le fichier `console` vous permet d'utiliser des commandes.
+Le fichier `console` vous permet d'utiliser des commandes pour effectuer des actions plus rapidements.
 
 Pour voir la liste des commandes disponibles
 
@@ -104,11 +104,23 @@ Pour voir la liste des commandes disponibles
 $ php console list
 ```
 
-Pour vider le cache de twig par exemple
+Pour vider le cache de twig
 
 ``` bash
 $ php console cache:clear
 ```
+
+Pour générer un controller ou middleware
+
+``` bash
+$ php console generate:controller Test
+```
+`app/Controllers/TestController.php`
+
+``` bash
+$ php console generate:middleware Test
+```
+`app/Middlewares/TestMiddleware.php`
 
 
 ## Astuces pour debugger
