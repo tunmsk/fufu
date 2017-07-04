@@ -8,13 +8,13 @@ Pour toutes contribution sur github, merci de lire le document [CONTRIBUTING.md]
 ## Objectifs
 
 - [x] Répartition des routes/controlleurs/vues/middlewares.
-- [x] Fichier de configuration d'environnement.
+- [ ] Fichier de configuration d'environnement.
 - [x] Fonctionnement du cache twig.
 - [x] Organisation du container pour faciliter l'ajout de nouvelles librairies.
 - [x] Fichier `error_pages.php` pour personnaliser les pages d'erreurs (404, 405, 500).
 - [x] Commandes gulp pour faciliter le développement front-end.
-- [x] Mise en place du middleware pour le csrf.
-- [ ] Commandes helper via la console pour créer rapidement des controlleurs/middlewares et vider le cache
+- [x] Mise en place de middlewares pour le csrf, message flash et sauvegarde des inputs.
+- [ ] Commandes helper via la console pour créer rapidement des controlleurs/middlewares et vider le cache de twig
 
 
 ## Pre-requis
