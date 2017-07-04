@@ -6,7 +6,7 @@ $container = $app->getContainer();
 $container['view'] = function ($container) {
   $pathView = dirname(dirname(__DIR__));
 
-  if(getenv('CACHE')){
+  if(env('CACHE')){
     $cache = $pathView.'/cache';
   }else{
     $cache = false;
@@ -24,11 +24,11 @@ $container['view'] = function ($container) {
 // Medoo
 $container['medoo'] = function () {
   $medoo = new Medoo\Medoo([
-      'database_type' => DB_TYPE,
-      'database_name' => DB_NAME,
-      'server' => DB_SERVER,
-      'username' => DB_USER,
-      'password' => DB_PWD
+      'database_type' => getenv('DB_TYPE'),
+      'database_name' => getenv('DB_NAME'),
+      'server' => getenv('DB_SERVER'),
+      'username' => getenv('DB_USER'),
+      'password' => getenv('DB_PWD')
   ]);
   return $medoo;
 };
@@ -39,7 +39,7 @@ $container['csrf'] = function () {
 };
 
 // DebugBar
-if(ENV === 'local'){
+if(env('ENV')){
   $provider = new Kitchenu\Debugbar\ServiceProvider();
   $provider->register($app);
 }

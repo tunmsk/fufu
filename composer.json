@@ -13,7 +13,8 @@
     "psr-4": {
       "App\\": "app/",
       "Commands\\": "commands/"
-    }
+    },
+    "files": ["app/functions.php"]
   },
   "require": {
     "slim/slim": "^3.0",
