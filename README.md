@@ -15,14 +15,14 @@ Pour toutes contribution sur github, merci de lire le document [CONTRIBUTING.md]
 - [x] Commandes gulp pour faciliter le développement front-end.
 - [x] Mise en place de middlewares pour le csrf, message flash et sauvegarde des inputs.
 - [x] Commande via la console pour vider le cache de twig.
-- [ ] Commandes via la console pour créer rapidement des controlleurs/middlewares.
+- [x] Commandes via la console pour créer rapidement des controlleurs/middlewares.
 
 
 ## Pre-requis
 
 - php 5.6+
   - extension pdo
-  - extension mbstring
+  - extension mbstring  
 
 
 ## Librairies/outils
@@ -35,6 +35,11 @@ Pour toutes contribution sur github, merci de lire le document [CONTRIBUTING.md]
 - [vlucas/phpdotenv](https://github.com/vlucas/phpdotenv) pour la configuration de l'environnement.
 - [symfony/console](https://github.com/symfony/console) pour des commandes console (en préparation).
 - Script gulpfile.js (lib nodejs) pour la compilation less/sass/scss et minification des fichiers css/js/images.
+
+
+### Note
+
+Le validateur utilisé fonctionne sur `php5.6` à l'heure ou cette note est écrite, mais depuis quelques mois la vérification `php5.6` via travis à été retiré du dépot, si jamais cette librairie commence à ne plus fonctionner correctement, merci de bien le signaler dans les issues (si possible préciser à partir de qu'elle version) il faudra alors utiliser `php7` le temps de corriger celà.
 
 
 ## Installation
@@ -91,7 +96,7 @@ D'autres commandes sont disponibles, je vous laisse regarder le script pour vous
 
 ## Commandes console
 
-Le fichier `console` vous permet d'utiliser des commandes.
+Le fichier `console` vous permet d'utiliser des commandes pour effectuer des actions plus rapidements.
 
 Pour voir la liste des commandes disponibles
 
@@ -99,11 +104,23 @@ Pour voir la liste des commandes disponibles
 $ php console list
 ```
 
-Pour vider le cache de twig par exemple
+Pour vider le cache de twig
 
 ``` bash
 $ php console cache:clear
 ```
+
+Pour générer un controller ou middleware
+
+``` bash
+$ php console generate:controller Test
+```
+`app/Controllers/TestController.php`
+
+``` bash
+$ php console generate:middleware Test
+```
+`app/Middlewares/TestMiddleware.php`
 
 
 ## Astuces pour debugger

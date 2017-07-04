@@ -13,7 +13,7 @@ class GenerateCommand extends Command
     protected function configure()
     {
         $this->setName('generate:command');
-        $this->addArgument("name", InputArgument::REQUIRED, 'Nom de la command');
+        $this->addArgument("name", InputArgument::REQUIRED, 'Nom de la commande');
         $this->setDescription('Generate command class');
 
     }
