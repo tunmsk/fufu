@@ -16,6 +16,7 @@ Pour toutes contribution sur github, merci de lire le document [CONTRIBUTING.md]
 - [x] Mise en place de middlewares pour le csrf, message flash et sauvegarde des inputs.
 - [x] Commande via la console pour vider le cache de twig.
 - [x] Commandes via la console pour créer rapidement des controlleurs/middlewares.
+- [ ] Mettre en place un système de migration.
 
 
 ## Pre-requis
