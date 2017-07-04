@@ -39,7 +39,7 @@ $container['csrf'] = function () {
 };
 
 // DebugBar
-if(getenv('ENV') === 'local'){
+if(env('ENV')){
   $provider = new Kitchenu\Debugbar\ServiceProvider();
   $provider->register($app);
 }
