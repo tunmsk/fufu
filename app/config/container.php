@@ -5,9 +5,10 @@ $container = $app->getContainer();
 // Twig
 $container['view'] = function ($container) {
   $pathView = dirname(dirname(__DIR__));
-  if(CACHE === true){
+
+  if(getenv('CACHE')){
     $cache = $pathView.'/cache';
-  }elseif(CACHE === false){
+  }else{
     $cache = false;
   }
   $view = new \Slim\Views\Twig($pathView.'/app/views', [

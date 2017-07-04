@@ -3,23 +3,20 @@
 // Autoload de composer
 require '../vendor/autoload.php';
 
+//Init de .env
+
+$dotenv = new Dotenv\Dotenv(__DIR__.'/../');
+$dotenv->load(true);
+
 // Le fichier qui contient nos constante de configuration
 require '../app/config/parameters.php';
-
 // Variable d'environnement pour les message d'erreurs slim
 
-if(ENV === "local"){
-  define("CACHE", false);
-  $env_error = true;
-}elseif(ENV === "prod"){
-  define("CACHE", true);
-  $env_error = false;
-}
 
 // Configuration slim pour les messages d'erreurs
 $configuration = [
   'settings' => [
-    'displayErrorDetails' => $env_error,
+    'displayErrorDetails' => getenv('ERRORS'),
   ],
 ];
 

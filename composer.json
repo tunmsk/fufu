@@ -23,6 +23,12 @@
     "slim/csrf": "^0.8.1",
     "kitchenu/slim-debugbar": "^1.0",
     "symfony/console": "^3.3",
-    "digitalnature/php-ref": "^1.2"
+    "digitalnature/php-ref": "^1.2",
+    "vlucas/phpdotenv": "^2.4"
+  },
+  "scripts": {
+    "post-install-cmd": [
+      "php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+    ]
   }
 }
