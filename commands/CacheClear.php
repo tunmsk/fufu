@@ -25,20 +25,25 @@ class CacheClear extends Command
         $output->writeln("Cache vidé avec succès");
     }
     protected function delete_directory($dirname) {
-        if (is_dir($dirname))
-            $dir_handle = opendir($dirname);
-        if (!$dir_handle)
+        $diractory_list = array();
+        if (is_dir($dirname)){
+          $dir_handle = opendir($dirname);
+          if (!$dir_handle)
             return false;
-        while($file = readdir($dir_handle)) {
-            if ($file != "." && $file != "..") {
-                if (!is_dir($dirname."/".$file) && $file != ".gitkeep")
-                    unlink($dirname."/".$file);
-                else
-                    $this->delete_directory($dirname.'/'.$file);
+          while($file = readdir($dir_handle)) {
+            if ($file != "." && $file != ".." && $file != ".gitkeep") {
+              if (!is_dir($dirname."/".$file))
+              unlink($dirname."/".$file);
+              else
+              $diractory_list[] = $dirname.'/'.$file;
+              $this->delete_directory($dirname.'/'.$file);
             }
+          }
+          closedir($dir_handle);
         }
-        closedir($dir_handle);
-        rmdir($dirname);
+        foreach ($diractory_list as $value) {
+          rmdir($value);
+        }
         return true;
     }
 }

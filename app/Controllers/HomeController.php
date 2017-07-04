@@ -13,7 +13,7 @@ class HomeController extends Controller {
       array("id" => "3", "name" => "Article 3"),
       array("id" => "4", "name" => "Article 4")
     );
-    r($datas);
+    // r($datas);
     $this->render($response, 'pages/home.twig', ["posts" => $datas]);
   }
 
