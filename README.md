@@ -31,7 +31,6 @@ Pour toutes contribution sur github, merci de lire le document [CONTRIBUTING.md]
 - [catfan/Medoo](https://github.com/catfan/Medoo) pour les requêtes SQL.
 - [respect/validation](https://github.com/Respect/Validation) pour valider les données.
 - [slim/csrf](https://github.com/slimphp/Slim-Csrf) pour la sécurité des sessions.
-- [php-middleware/phpdebugbar](https://github.com/php-middleware/phpdebugbar) pour une toolbar de debug.
 - [digitalnature/php-ref](https://github.com/digitalnature/php-ref) pour une fonction var_dump amélioré.
 - [vlucas/phpdotenv](https://github.com/vlucas/phpdotenv) pour la configuration de l'environnement.
 - [symfony/console](https://github.com/symfony/console) pour des commandes console (en préparation).
@@ -52,6 +51,10 @@ Via composer
 $ composer install
 ```
 
+Vérifiez que le fichier `.env` a bien été créé, il s'agit du fichier de configuration de votre environnement ou vous définissez la connexion à la base de données, l'environnement `local` ou `prod` et l'activation du cache de twig.
+
+Si jamais le fichier n'a pas été créé, faite le manuellement en dupliquant `.env.example`.
+
 Via npm pour le script gulp (optionnel)
 
 ``` bash
@@ -61,7 +64,7 @@ $ npm install
 
 ## Permissions
 
-Autoriser les dossiers `cache` et `debugbar` à l'écriture (chmod 775).
+Autoriser le dossier `cache` à l'écriture (chmod 775).
 
 
 # Guide d'utilisation
@@ -101,3 +104,10 @@ Pour vider le cache de twig par exemple
 ``` bash
 $ php console cache:clear
 ```
+
+
+## Astuces pour debugger
+
+Pour debugger pendant le développement de votre application, je vous recommande d'utiliser la fonction `r()` qui est un `var_dump` amélioré.
+
+Pour les requêtes SQL avec `medoo`, vous avez la fonction `debug()`, `error()` ou encore `log()`.

@@ -37,9 +37,3 @@ $container['medoo'] = function () {
 $container['csrf'] = function () {
     return new \Slim\Csrf\Guard;
 };
-
-// DebugBar
-if(getenv('ENV') == "local"){
-  $container['debugbar_middleware'] = new PhpMiddleware\PhpDebugBar\PhpDebugBarMiddlewareFactory();
-  $app->add($app->getContainer()->get('debugbar_middleware'));
-}

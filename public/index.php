@@ -10,7 +10,7 @@ $dotenv->load(true);
 // Configuration slim pour les messages d'erreurs
 $configuration = [
   'settings' => [
-    'displayErrorDetails' => env('ERRORS'),
+    'displayErrorDetails' => env('ENV'),
   ],
 ];
 
