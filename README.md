@@ -9,9 +9,9 @@ Pour toutes contribution sur github, merci de lire le document [CONTRIBUTING.md]
 
 - [x] Répartition des routes/controlleurs/vues/middlewares.
 - [x] Fichier de configuration d'environnement.
-- [x] Fonctionnement du cache twig.
+- [x] Fonctionnement de twig et du cache.
 - [x] Organisation du container pour faciliter l'ajout de nouvelles librairies.
-- [x] Fichier `error_pages.php` pour personnaliser les pages d'erreurs (404, 405, 500).
+- [x] Fichier `app/config/error_pages.php` pour personnaliser les pages d'erreurs (404, 405, 500).
 - [x] Commandes gulp pour faciliter le développement front-end.
 - [x] Mise en place de middlewares pour le csrf, message flash et sauvegarde des inputs.
 - [x] Commande via la console pour vider le cache de twig.
@@ -30,11 +30,11 @@ Pour toutes contribution sur github, merci de lire le document [CONTRIBUTING.md]
 - [slim/twig-view](https://github.com/slimphp/Twig-View) pour la vue.
 - [catfan/Medoo](https://github.com/catfan/Medoo) pour les requêtes SQL.
 - [respect/validation](https://github.com/Respect/Validation) pour valider les données.
-- [slim/csrf](https://github.com/slimphp/Slim-Csrf) pour la sécurisé des sessions.
-- [kitchenu/slim-debugbar](https://github.com/kitchenu/Slim-DebugBar) pour une toolbar de debug.
-- [digitalnature/php-ref](https://github.com/digitalnature/php-ref) pour une fonction var_dump plus optimal.
+- [slim/csrf](https://github.com/slimphp/Slim-Csrf) pour la sécurité des sessions.
+- [php-middleware/phpdebugbar](https://github.com/php-middleware/phpdebugbar) pour une toolbar de debug.
+- [digitalnature/php-ref](https://github.com/digitalnature/php-ref) pour une fonction var_dump amélioré.
 - [vlucas/phpdotenv](https://github.com/vlucas/phpdotenv) pour la configuration de l'environnement.
-- [symfony/console](https://github.com/symfony/console) pour des commandes helpers sur console (en préparation).
+- [symfony/console](https://github.com/symfony/console) pour des commandes console (en préparation).
 - Script gulpfile.js (lib nodejs) pour la compilation less/sass/scss et minification des fichiers css/js/images.
 
 
@@ -66,7 +66,7 @@ Autoriser les dossiers `cache` et `debugbar` à l'écriture (chmod 775).
 
 # Guide d'utilisation
 
-Pour bien utiliser ce template pour projet web, il est important de bien connaitre le fonctionnement de `Slim 3` et des divers librairies utilisés.
+Pour bien utiliser ce template pour projet web, il est important de bien connaitre le fonctionnement de `Slim 3` et des divers librairies utilisées.
 
 Vous avez à votre disposition, plus haut, les liens vers ces derniers pour en savoir plus.
 
@@ -75,7 +75,7 @@ Vous avez à votre disposition, plus haut, les liens vers ces derniers pour en s
 
 Le script `gulpfile.js` vous permet avec de simple commandes de compiler ou minifier des fichiers utilisés coté front.
 
-Dans le dossier `src`, sont disposez les dossiers dédié au développement front dans divers langagues (less, sass, scss, css et js) mais vous pouvez aussi optimiser les images.
+Dans le dossier `src`, sont disposez les dossiers dédiés au développement front-end dans divers langagues (less, sass, scss, css et js) mais vous pouvez aussi optimiser les images.
 
 Pour pouvoir compiler, minifier et copier ces derniers dans le dossier `public` de votre application, il suffit de taper cette commande (après avoir fait un `npm install`)
 
@@ -83,10 +83,10 @@ Pour pouvoir compiler, minifier et copier ces derniers dans le dossier `public` 
 $ gulp build
 ```
 
-Il y as d'autre commandes disponibles, je vous laisse regarder le script pour vous familiarisez.
+D'autres commandes sont disponibles, je vous laisse regarder le script pour vous familiarisez.
 
 
-## Commandes helper
+## Commandes console
 
 Le fichier `console` vous permet d'utiliser des commandes.
 

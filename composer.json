@@ -14,7 +14,9 @@
       "App\\": "app/",
       "Commands\\": "commands/"
     },
-    "files": ["app/functions.php"]
+    "files": [
+      "app/functions.php"
+    ]
   },
   "require": {
     "slim/slim": "^3.0",
@@ -22,7 +24,7 @@
     "catfan/Medoo": "^1.4",
     "respect/validation": "^1.1",
     "slim/csrf": "^0.8.1",
-    "kitchenu/slim-debugbar": "^1.0",
+    "php-middleware/php-debug-bar": "^1.4",
     "symfony/console": "^3.3",
     "digitalnature/php-ref": "^1.2",
     "vlucas/phpdotenv": "^2.4"
