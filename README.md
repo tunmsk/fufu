@@ -31,7 +31,7 @@ Pour toutes contribution sur github, merci de lire le document [CONTRIBUTING.md]
 - [catfan/Medoo](https://github.com/catfan/Medoo) pour les requêtes SQL.
 - [respect/validation](https://github.com/Respect/Validation) pour valider les données.
 - [slim/csrf](https://github.com/slimphp/Slim-Csrf) pour la sécurisé des sessions.
-- [kitchenu/slim-debugbar](https://github.com/kitchenu/Slim-DebugBar) pour une toolbar de debug.
+- [php-middleware/phpdebugbar](https://github.com/php-middleware/phpdebugbar) pour une toolbar de debug.
 - [digitalnature/php-ref](https://github.com/digitalnature/php-ref) pour une fonction var_dump plus optimal.
 - [vlucas/phpdotenv](https://github.com/vlucas/phpdotenv) pour la configuration de l'environnement.
 - [symfony/console](https://github.com/symfony/console) pour des commandes helpers sur console (en préparation).

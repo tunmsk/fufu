@@ -7,5 +7,3 @@ cache/*
 !cache/.gitkeep
 node_modules/*
 package-lock.json
-debugbar/*
-!debugbar/.gitkeep

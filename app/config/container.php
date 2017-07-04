@@ -39,7 +39,7 @@ $container['csrf'] = function () {
 };
 
 // DebugBar
-if(env('ENV')){
-  $provider = new Kitchenu\Debugbar\ServiceProvider();
-  $provider->register($app);
+if(getenv('ENV') == "local"){
+  $container['debugbar_middleware'] = new PhpMiddleware\PhpDebugBar\PhpDebugBarMiddlewareFactory();
+  $app->add($app->getContainer()->get('debugbar_middleware'));
 }
