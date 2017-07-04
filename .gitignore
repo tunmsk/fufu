@@ -3,8 +3,8 @@ composer.lock
 composer.phar
 vendor/*
 cache/*
+.env
 !cache/.gitkeep
-app/config/parameters.php
 node_modules/*
 debugbar/*
 !debugbar/.gitkeep
