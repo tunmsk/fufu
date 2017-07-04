@@ -1,4 +1,4 @@
-# Contribuer pour GameInstallScript
+# Contribuer pour le template fufu
 Vous voulez contibuer votre savoir et votre aide au projet ? **Voici comment vous pouvez nous aider**
 
 S'il vous plaît prennez le temps d'examiner ce document dans le but de rendre le processus de contribution facile et efficace pour tout le monde.
