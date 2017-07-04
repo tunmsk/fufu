@@ -16,7 +16,7 @@ require '../app/config/parameters.php';
 // Configuration slim pour les messages d'erreurs
 $configuration = [
   'settings' => [
-    'displayErrorDetails' => getenv('ERRORS'),
+    'displayErrorDetails' => env('ERRORS'),
   ],
 ];
 
