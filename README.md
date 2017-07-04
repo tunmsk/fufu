@@ -17,6 +17,7 @@ Pour toutes contribution sur github, merci de lire le document [CONTRIBUTING.md]
 - [x] Commande via la console pour vider le cache de twig.
 - [x] Commandes via la console pour créer rapidement des controlleurs/middlewares.
 - [ ] Mettre en place un système de migration.
+- [ ] Commandes via la console pour simplifier les commandes phinx.
 
 
 ## Pre-requis
@@ -34,7 +35,8 @@ Pour toutes contribution sur github, merci de lire le document [CONTRIBUTING.md]
 - [slim/csrf](https://github.com/slimphp/Slim-Csrf) pour la sécurité des sessions.
 - [digitalnature/php-ref](https://github.com/digitalnature/php-ref) pour une fonction var_dump amélioré.
 - [vlucas/phpdotenv](https://github.com/vlucas/phpdotenv) pour la configuration de l'environnement.
-- [symfony/console](https://github.com/symfony/console) pour des commandes console (en préparation).
+- [robmorgan/phinx](https://github.com/cakephp/phinx) pour les migrations.
+- [symfony/console](https://github.com/symfony/console) pour des commandes console.
 - Script gulpfile.js (lib nodejs) pour la compilation less/sass/scss et minification des fichiers css/js/images.
 
 
@@ -122,6 +124,11 @@ $ php console generate:controller Test
 $ php console generate:middleware Test
 ```
 `app/Middlewares/TestMiddleware.php`
+
+
+## Migration
+
+In progress...
 
 
 ## Astuces pour debugger
