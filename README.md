@@ -8,13 +8,14 @@ Pour toutes contribution sur github, merci de lire le document [CONTRIBUTING.md]
 ## Objectifs
 
 - [x] Répartition des routes/controlleurs/vues/middlewares.
-- [ ] Fichier de configuration d'environnement.
+- [x] Fichier de configuration d'environnement.
 - [x] Fonctionnement du cache twig.
 - [x] Organisation du container pour faciliter l'ajout de nouvelles librairies.
 - [x] Fichier `error_pages.php` pour personnaliser les pages d'erreurs (404, 405, 500).
 - [x] Commandes gulp pour faciliter le développement front-end.
 - [x] Mise en place de middlewares pour le csrf, message flash et sauvegarde des inputs.
-- [ ] Commandes helper via la console pour créer rapidement des controlleurs/middlewares et vider le cache de twig
+- [x] Commande via la console pour vider le cache de twig.
+- [ ] Commandes via la console pour créer rapidement des controlleurs/middlewares.
 
 
 ## Pre-requis
@@ -72,7 +73,7 @@ Vous avez à votre disposition, plus haut, les liens vers ces derniers pour en s
 
 ## Commandes gulp
 
-Le script gulp vous permet avec de simple commandes de compiler ou minifier des fichiers utilisés coté front.
+Le script `gulpfile.js` vous permet avec de simple commandes de compiler ou minifier des fichiers utilisés coté front.
 
 Dans le dossier `src`, sont disposez les dossiers dédié au développement front dans divers langagues (less, sass, scss, css et js) mais vous pouvez aussi optimiser les images.
 
@@ -87,4 +88,16 @@ Il y as d'autre commandes disponibles, je vous laisse regarder le script pour vo
 
 ## Commandes helper
 
-In progress...
+Le fichier `console` vous permet d'utiliser des commandes.
+
+Pour voir la liste des commandes disponibles
+
+``` bash
+$ php console list
+```
+
+Pour vider le cache de twig par exemple
+
+``` bash
+$ php console cache:clear
+```
