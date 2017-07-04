@@ -7,6 +7,9 @@ require __DIR__.'/vendor/autoload.php';
 use Symfony\Component\Console\Application;
 
 $application = new Application('Sushi', '1.0.0');
-$HelloCommand = new \Commands\Hello();
-$application->add($HelloCommand);
+
+$CacheClearCommand = new \Commands\CacheClear();
+$GenerateCommand = new \Commands\GenerateCommand();
+$application->add($CacheClearCommand);
+$application->add($GenerateCommand);
 $application->run();
