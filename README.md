@@ -16,6 +16,8 @@ Pour toutes contribution sur github, merci de lire le document [CONTRIBUTING.md]
 - [x] Mise en place de middlewares pour le csrf, message flash et sauvegarde des inputs.
 - [x] Commande via la console pour vider le cache de twig.
 - [x] Commandes via la console pour créer rapidement des controlleurs/middlewares.
+- [x] Mettre en place un système de migration.
+- [ ] Commandes via la console pour simplifier les commandes phinx.
 
 
 ## Pre-requis
@@ -33,7 +35,8 @@ Pour toutes contribution sur github, merci de lire le document [CONTRIBUTING.md]
 - [slim/csrf](https://github.com/slimphp/Slim-Csrf) pour la sécurité des sessions.
 - [digitalnature/php-ref](https://github.com/digitalnature/php-ref) pour une fonction var_dump amélioré.
 - [vlucas/phpdotenv](https://github.com/vlucas/phpdotenv) pour la configuration de l'environnement.
-- [symfony/console](https://github.com/symfony/console) pour des commandes console (en préparation).
+- [robmorgan/phinx](https://github.com/cakephp/phinx) pour les migrations.
+- [symfony/console](https://github.com/symfony/console) pour des commandes console.
 - Script gulpfile.js (lib nodejs) pour la compilation less/sass/scss et minification des fichiers css/js/images.
 
 
@@ -64,6 +67,18 @@ Via npm pour le script gulp (optionnel)
 
 ``` bash
 $ npm install
+```
+
+Le template utilise une connexion à une base de données avec comme table d'exemple `posts`, vous devez donc créer une base de données que vous appelez comme vous le souhaitez, mais il faudra l'indiquer dans votre `.env`.
+
+Puis vous utilisez ces commandes `phinx` pour effectuer la migration
+
+``` bash
+$ nvendor/bin/phinx migrate
+```
+
+``` bash
+$ nvendor/bin/phinx seed:run
 ```
 
 

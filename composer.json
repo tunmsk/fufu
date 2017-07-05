@@ -26,7 +26,8 @@
     "slim/csrf": "^0.8.1",
     "symfony/console": "^3.3",
     "digitalnature/php-ref": "^1.2",
-    "vlucas/phpdotenv": "^2.4"
+    "vlucas/phpdotenv": "^2.4",
+    "robmorgan/phinx": "^0.8.1"
   },
   "scripts": {
     "pre-install-cmd": [

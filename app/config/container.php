@@ -23,12 +23,17 @@ $container['view'] = function ($container) {
 
 // Medoo
 $container['medoo'] = function () {
+  if (getenv('ENV') == 'local') {
+    $db = "D";
+  } elseif (getenv('ENV') == 'prod') {
+    $db = "P";
+  }
   $medoo = new Medoo\Medoo([
-      'database_type' => getenv('DB_TYPE'),
-      'database_name' => getenv('DB_NAME'),
-      'server' => getenv('DB_SERVER'),
-      'username' => getenv('DB_USER'),
-      'password' => getenv('DB_PWD')
+      'database_type' => getenv('DB'.$db.'_TYPE'),
+      'database_name' => getenv('DB'.$db.'_NAME'),
+      'server' => getenv('DB'.$db.'_SERVER'),
+      'username' => getenv('DB'.$db.'_USER'),
+      'password' => getenv('DB'.$db.'_PWD')
   ]);
   return $medoo;
 };
