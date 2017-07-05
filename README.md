@@ -16,7 +16,7 @@ Pour toutes contribution sur github, merci de lire le document [CONTRIBUTING.md]
 - [x] Mise en place de middlewares pour le csrf, message flash et sauvegarde des inputs.
 - [x] Commande via la console pour vider le cache de twig.
 - [x] Commandes via la console pour créer rapidement des controlleurs/middlewares.
-- [ ] Mettre en place un système de migration.
+- [x] Mettre en place un système de migration.
 - [ ] Commandes via la console pour simplifier les commandes phinx.
 
 
@@ -67,6 +67,18 @@ Via npm pour le script gulp (optionnel)
 
 ``` bash
 $ npm install
+```
+
+Le template utilise une connexion à une base de données avec comme table d'exemple `posts`, vous devez donc créer une base de données que vous appelez comme vous le souhaitez, mais il faudra l'indiquer dans votre `.env`.
+
+Puis vous utilisez ces commandes `phinx` pour effectuer la migration
+
+``` bash
+$ nvendor/bin/phinx migrate
+```
+
+``` bash
+$ nvendor/bin/phinx seed:run
 ```
 
 
@@ -124,11 +136,6 @@ $ php console generate:controller Test
 $ php console generate:middleware Test
 ```
 `app/Middlewares/TestMiddleware.php`
-
-
-## Migration
-
-In progress...
 
 
 ## Astuces pour debugger
