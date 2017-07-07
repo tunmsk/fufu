@@ -1,3 +1,5 @@
+[![version](https://img.shields.io/badge/Version-1.0.0-brightgreen.svg)](https://github.com/Fukotaku/fufu/releases/tag/1.0.0)
+[![GitHub license](https://img.shields.io/badge/license-New%20BSD-blue.svg)](https://github.com/Fukotaku/fufu/blob/master/LICENSE)
 # Fufu
 
 Template pour projet web basé sur `slim 3`.
