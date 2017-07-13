@@ -130,12 +130,12 @@ $ php console cache:clear
 Pour générer un controller ou middleware
 
 ``` bash
-$ php console generate:controller Test
+$ php console generate:controller TestController
 ```
 `app/Controllers/TestController.php`
 
 ``` bash
-$ php console generate:middleware Test
+$ php console generate:middleware TestController
 ```
 `app/Middlewares/TestMiddleware.php`
 

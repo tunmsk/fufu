@@ -24,7 +24,7 @@ class GenerateController extends Command
 
         $text = file_get_contents(__DIR__.'/templates/controller.template.php');
 
-        file_put_contents(dirname(__DIR__).'/app/Controllers/'.$name.'Controller.php', preg_replace('/PregReplace/', "$name", $text));
+        file_put_contents(dirname(__DIR__).'/app/Controllers/'.$name.'.php', preg_replace('/PregReplace/', "$name", $text));
 
         $output->writeln("Controller généré");
     }
