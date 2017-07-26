@@ -37,6 +37,9 @@ gulp.task('scss', function () {
 gulp.task('js', function () {
   return gulp.src(source + '/js/*.js')
     .pipe(plugins.uglify())
+    .pipe(plugins.rename({
+      suffix: '.min'
+    }))
     .pipe(gulp.dest(destination + '/js/'));
 });
 
@@ -68,6 +71,8 @@ gulp.task('watch', function () {
   gulp.watch(source + '/less/*.less', ['less']);
   gulp.watch(source + '/sass/*.sass', ['sass']);
   gulp.watch(source + '/scss/*.scss', ['scss']);
+  gulp.watch(source + '/css/*.css', ['min']);
+  gulp.watch(source + '/js/*.js', ['min']);
 });
 
 // Tâche par défaut
