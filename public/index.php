@@ -3,6 +3,12 @@
 // Autoload de composer
 require '../vendor/autoload.php';
 
+// Toolbar (dev)
+// $profiler = new \Fabfuel\Prophiler\Profiler();
+// $toolbar = new \Fabfuel\Prophiler\Toolbar($profiler);
+// $toolbar->addDataCollector(new \Fabfuel\Prophiler\DataCollector\Request());
+// echo $toolbar->render();
+
 // Initialisation du .env
 $dotenv = new Dotenv\Dotenv(__DIR__.'/../');
 $dotenv->load(true);
