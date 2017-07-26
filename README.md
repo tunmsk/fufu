@@ -1,4 +1,4 @@
-[![version](https://img.shields.io/badge/Version-1.0.0-brightgreen.svg)](https://github.com/Fukotaku/fufu/releases/tag/1.0.0)
+[![version](https://img.shields.io/badge/Version-1.0.1-brightgreen.svg)](https://github.com/Fukotaku/fufu/releases/tag/1.0.1)
 [![GitHub license](https://img.shields.io/badge/license-New%20BSD-blue.svg)](https://github.com/Fukotaku/fufu/blob/master/LICENSE)
 # Fufu
 
@@ -19,7 +19,6 @@ Pour toutes contribution sur github, merci de lire le document [CONTRIBUTING.md]
 - [x] Commande via la console pour vider le cache de twig.
 - [x] Commandes via la console pour créer rapidement des controlleurs/middlewares.
 - [x] Mettre en place un système de migration de base de données.
-- [ ] Commandes via la console pour simplifier les commandes phinx.
 
 
 ## Pre-requis
@@ -135,7 +134,7 @@ $ php console generate:controller TestController
 `app/Controllers/TestController.php`
 
 ``` bash
-$ php console generate:middleware TestController
+$ php console generate:middleware TestMiddleware
 ```
 `app/Middlewares/TestMiddleware.php`
 
