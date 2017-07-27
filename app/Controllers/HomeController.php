@@ -10,7 +10,6 @@ class HomeController extends Controller {
   public function getHome(RequestInterface $request, ResponseInterface $response) {
     $datas = $this->medoo->select("posts", "*");
     // r($datas);
-    // echo $toolbar->render();
     $this->render($response, 'pages/home.twig', ["posts" => $datas]);
   }
 
