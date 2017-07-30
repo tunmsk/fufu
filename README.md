@@ -1,4 +1,4 @@
-[![version](https://img.shields.io/badge/Version-1.0.1-brightgreen.svg)](https://github.com/Fukotaku/fufu/releases/tag/1.0.1)
+[![version](https://img.shields.io/badge/Version-1.0.2-brightgreen.svg)](https://github.com/Fukotaku/fufu/releases/tag/1.0.2)
 [![GitHub license](https://img.shields.io/badge/license-New%20BSD-blue.svg)](https://github.com/Fukotaku/fufu/blob/master/LICENSE)
 # Fufu
 
@@ -43,7 +43,7 @@ Pour toutes contribution sur github, merci de lire le document [CONTRIBUTING.md]
 
 ### Note
 
-Le validateur utilisé fonctionne sur `php5.6` à l'heure ou cette note est écrite, mais depuis quelques mois la vérification `php5.6` via travis à été retiré du dépot, si jamais cette librairie commence à ne plus fonctionner correctement, merci de bien le signaler dans les issues (si possible préciser à partir de qu'elle version) il faudra alors utiliser `php7` le temps de corriger celà.
+Certaines librairies comme le validateur fonctionne sur `php5.6` à l'heure ou cette note est écrite, mais depuis peu la vérification `php5.6` via travis à été retiré du dépot, si jamais une librairie commence à ne plus fonctionner correctement, merci de bien le signaler dans les issues (si possible préciser à partir de qu'elle version) utiliser `php7` est recommandé pour éviter ce genre de soucis.
 
 
 ## Installation

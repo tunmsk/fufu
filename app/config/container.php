@@ -38,7 +38,7 @@ $container['medoo'] = function () {
   return $medoo;
 };
 
-//Csrf
+// Csrf
 $container['csrf'] = function () {
     return new \Slim\Csrf\Guard;
 };

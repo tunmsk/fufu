@@ -21,15 +21,13 @@ $c['notAllowedHandler'] = function ($c) {
   };
 };
 
-// 500 (php7+ only)
-/*
-$c = $app->getContainer();
-$c['phpErrorHandler'] = function ($c) {
-  return function ($request, $response, $error) use ($c) {
-    return $c['response']
-      ->withStatus(500)
-      ->withHeader('Content-Type', 'text/html')
-      ->write('Something went wrong!');
-  };
-};
-*/
+// 500
+// $c = $app->getContainer();
+// $c['errorHandler'] = function ($c) {
+//   return function ($request, $response, $error) use ($c) {
+//     return $c['response']
+//       ->withStatus(500)
+//       ->withHeader('Content-Type', 'text/html')
+//       ->write('Something went wrong!');
+//   };
+// };
